@@ -12,13 +12,13 @@
   border-top: 1px solid;
 }
 
-.d-i-f {
-  display: inline-flex;
+.absolute {
+  position: absolute;
 }
 
 .search-input {
-  text-align: center;
   margin-left: 10px;
+  display: inline-flex;
 }
 
 .m-10px {
@@ -27,4 +27,29 @@
 
 .search-span {
   margin-top: 10px;
+}
+
+.ny-text {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.filter {
+  cursor: pointer;
+}
+
+.search-filter {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 440px) {
+  .ny-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 366px) {
 }

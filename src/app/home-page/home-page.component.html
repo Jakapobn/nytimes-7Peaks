@@ -1,9 +1,9 @@
-<app-header (search)="query = $event"></app-header>
+<app-header (search)="query = $event" (filter)="filter = $event"></app-header>
 <div class="ui-g">
     <div class="ui-g-1"></div>
     <div class="ui-g-10 ui-sm-12">
 
-        <div *ngFor="let data of ($nytimesData | async)?.results | searchFilter: query" class="panel">
+        <div *ngFor="let data of ($nytimesData | async)?.results | searchFilter: query | sort : filter" class="panel">
             <p-panel>
                 <p-header>
                     <div class="title" (click)="onSelectArticle(data)">

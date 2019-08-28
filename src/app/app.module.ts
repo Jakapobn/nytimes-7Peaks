@@ -10,12 +10,15 @@ import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { TieredMenuModule } from 'primeng/tieredmenu';
+import { MenuItem } from 'primeng/api';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
 import { StickyBarComponent } from './shared/sticky-bar/sticky-bar.component';
 import { SearchPipe } from './_pipe/search.pipe';
+import { SortPipe } from './_pipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { SearchPipe } from './_pipe/search.pipe';
     HomePageComponent,
     HeaderComponent,
     StickyBarComponent,
-    SearchPipe
+    SearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { SearchPipe } from './_pipe/search.pipe';
     PanelModule,
     ButtonModule,
     FormsModule,
-    InputTextModule
+    InputTextModule,
+    TieredMenuModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

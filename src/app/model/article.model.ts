@@ -1,0 +1,25 @@
+export interface ArticleModel {
+    abstract: string,
+    byline: string,
+    created_date: string,
+    des_facet: string,
+    first_published_date: string,
+    geo_facet: string,
+    item_type: string,
+    kicker: string,
+    material_type_facet: string,
+    multimedia: [{ url: string }]
+    org_facet: string,
+    per_facet: string,
+    published_date: string,
+    related_urls: string,
+    section: string,
+    slug_name: string,
+    source: string,
+    subheadline: string,
+    subsection: string,
+    thumbnail_standard: string,
+    title: string,
+    updated_date: string,
+    url: string
+}

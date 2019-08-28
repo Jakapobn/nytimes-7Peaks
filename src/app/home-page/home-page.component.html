@@ -1,19 +1,37 @@
-<p>home-page works!</p>
+<div class="ui-g">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-10 ui-sm-12">
 
-<div *ngFor="let data of ($nytimesData | async)?.results">
-    {{data.title}}
-</div>
+        <div *ngFor="let data of ($nytimesData | async)?.results" class="panel">
+            <p-panel>
+                <p-header>
+                    <div class="title" (click)="onSelectArticle(data)">
+                        <p><u>{{data.title}}</u></p>
+                    </div>
+                </p-header>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-4">
-            One of three columns
+                <div class="row d-i-f">
+                    <div class="sub-title">
+                        {{data.byline ? data.byline : 'Anonymous'}} on {{convertDate(data?.updated_date)}}
+                    </div>
+                </div>
+
+                <div class="row content">
+
+                    <img class="img-thumbnail"
+                        src="{{data?.thumbnail_standard ? data?.thumbnail_standard : 'assets/image/No_image_available.svg'}}">
+                    <p class="content-text">{{data?.abstract}}</p>
+
+                </div>
+
+                <p-footer>
+                    <div class="footer" (click)="onSelectArticle(data)">
+                        <p><u>Read more</u></p>
+                    </div>
+                </p-footer>
+            </p-panel>
         </div>
-        <div class="col-sm-12 col-md-4">
-            One of three columns
-        </div>
-        <div class="col-sm-12 col-md-4">
-            One of three columns
-        </div>
+
     </div>
+    <div class="ui-g-1"></div>
 </div>

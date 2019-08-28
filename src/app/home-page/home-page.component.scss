@@ -1,0 +1,51 @@
+.img-thumbnail {
+  height: 100%;
+  width: 75px;
+  float: left;
+  margin-right: 0.5rem;
+  border-radius: 50px;
+}
+
+.d-i-f {
+  display: inline-flex;
+}
+
+.content-text {
+  margin-left: 1rem;
+}
+
+.panel {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  text-align: right;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sub-title {
+  //  padding: 0.5rem;
+  /* border: 1px solid; */
+  /* border-radius: 30px; */
+  font-size: 10px;
+  margin-bottom: 1rem;
+}
+
+.content {
+  height: auto;
+  min-height: 80px;
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 440px) {
+}
+
+@media screen and (max-width: 366px) {
+}

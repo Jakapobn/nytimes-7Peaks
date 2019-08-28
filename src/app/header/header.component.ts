@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   sticky: boolean = false;
   elementPosition: any;
+  today = new Date();
 
   constructor() { }
 

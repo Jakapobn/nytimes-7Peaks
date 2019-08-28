@@ -1,5 +1,15 @@
+<p-card>
+    <div class="ny-text">
+        <div>The New York Times</div>
+    </div>
+    <div class="date">
+        {{today | date:'EEEE, MMMM d, y'}}
+    </div>
+</p-card>
+<br />
+
 <div class="tabs is-centered is-fullwidth" #stickyMenu [class.sticky]="sticky">
-    <div class="d-i-f">
+    <div *ngIf="sticky" class="d-i-f">
         <div class="m-10px">world</div>
         <div class="m-10px">U.S.</div>
         <div class="m-10px">Politics</div>

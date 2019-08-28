@@ -11,6 +11,7 @@ import { DatePipe } from '@angular/common';
 export class HomePageComponent implements OnInit {
 
   $nytimesData = this.nytimesService.getNytimesAllContent();
+  query: string;
 
   constructor(private nytimesService: NytimesService, private datePipe: DatePipe) { }
 
@@ -22,6 +23,7 @@ export class HomePageComponent implements OnInit {
 
   onSelectArticle(article: ArticleModel) {
     console.log(article);
+    console.log(this.query);
   }
 
   convertDate(date: string) {

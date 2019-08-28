@@ -1,0 +1,8 @@
+<div class="tabs is-centered is-fullwidth border" #stickyMenu [class.sticky]="sticky">
+    <div class="d-i-f m-10px">
+        <!-- <button class="ui-button-secondary" type="button" pButton icon="pi pi-bars"></button> -->
+        <div class="search-input">
+            <input type="text" pInputText placeholder=" SEARCH" [(ngModel)]="query" (keyup)="onSearch()">
+        </div>
+    </div>
+</div>

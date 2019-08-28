@@ -1,17 +1,10 @@
 <p-card>
-    <div class="ny-text">
-        <div>The New York Times</div>
-    </div>
     <div class="date">
         {{today | date:'EEEE, MMMM d, y'}}
     </div>
+    <div class="ny-text">
+        <div>The New York Times</div>
+    </div>
+    <app-sticky-bar (search)="onSearch($event)"></app-sticky-bar>
 </p-card>
 <br />
-
-<div class="tabs is-centered is-fullwidth" #stickyMenu [class.sticky]="sticky">
-    <div *ngIf="sticky" class="d-i-f">
-        <div class="m-10px">world</div>
-        <div class="m-10px">U.S.</div>
-        <div class="m-10px">Politics</div>
-    </div>
-</div>

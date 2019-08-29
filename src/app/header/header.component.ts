@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,8 @@ import { Component, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() useSearch: boolean;
   @Output() search = new EventEmitter();
   @Output() filter = new EventEmitter();
   today = new Date();

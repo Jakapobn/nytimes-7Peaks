@@ -1,18 +1,18 @@
 <div class="tabs is-centered is-fullwidth border" #stickyMenu [class.sticky]="sticky">
     <div class="m-10px">
-        <div class="search-input" [ngClass]="{'absolute': sticky}">
+        <div *ngIf="useSearch" class="search-input" [ngClass]="{'absolute': sticky}">
             <input class="search" type="text" pInputText placeholder=" SEARCH" [(ngModel)]="query" (keyup)="onSearch()">
             <div class="search-filter">
 
-                <button #btn type="button" pButton icon="pi pi-bars"
-                    label="Filter" (click)="menu.toggle($event)"></button>
-                <p-tieredMenu #menu [style]="{'position': sticky? 'unset' : 'absolute' }" [model]="items"
-                    [popup]="true" (click)="onClickFilter($event.target.innerText)">
+                <button #btn type="button" pButton icon="pi pi-bars" label="Filter"
+                    (click)="menu.toggle($event)"></button>
+                <p-tieredMenu #menu [style]="{'position': sticky? 'unset' : 'absolute' }" [model]="items" [popup]="true"
+                    (click)="onClickFilter($event.target.innerText)">
                 </p-tieredMenu>
             </div>
         </div>
 
-        <div *ngIf="sticky" class="ny-text">
+        <div *ngIf="sticky" class="ny-text" [routerLink]="['/']">
             <div>The New York Times</div>
         </div>
     </div>

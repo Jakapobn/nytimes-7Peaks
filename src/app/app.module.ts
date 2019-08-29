@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { StickyBarComponent } from './shared/sticky-bar/sticky-bar.component';
 import { SearchPipe } from './_pipe/search.pipe';
 import { SortPipe } from './_pipe/sort.pipe';
+import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SortPipe } from './_pipe/sort.pipe';
     HeaderComponent,
     StickyBarComponent,
     SearchPipe,
-    SortPipe
+    SortPipe,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,

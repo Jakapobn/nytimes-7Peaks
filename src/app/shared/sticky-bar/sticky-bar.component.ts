@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sticky-bar',
@@ -10,6 +10,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, 
 export class StickyBarComponent implements OnInit {
   @ViewChild('stickyMenu', { static: false }) menuElement: ElementRef;
 
+  @Input() useSearch: boolean;
   @Output() search = new EventEmitter();
   @Output() filter = new EventEmitter();
 

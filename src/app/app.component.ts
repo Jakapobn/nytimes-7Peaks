@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NytimesService } from './service/nytimes.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  nytimesData$ = this.nytimesService.getNytimesAllContent();
+
+  constructor(private nytimesService: NytimesService) {
+    this.nytimesService.setNytimesAllContentData(this.nytimesData$);
+  }
 
 }

@@ -1,10 +1,11 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, Output, EventEmitter, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-sticky-bar',
   templateUrl: './sticky-bar.component.html',
   styleUrls: ['./sticky-bar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
 })
 export class StickyBarComponent implements OnInit {
   @ViewChild('stickyMenu', { static: false }) menuElement: ElementRef;
@@ -28,7 +29,6 @@ export class StickyBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
   }
 
   ngAfterViewInit() {

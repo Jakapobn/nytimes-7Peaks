@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 55px;
   border-top: 0 !important;
 }
 
@@ -40,6 +41,15 @@
 
 .search-filter {
   margin-left: 10px;
+}
+
+.menucus {
+  background-color: #2f353a;
+  font-size: small;
+}
+
+.search {
+  height: 33px;
 }
 
 @media screen and (max-width: 767px) {

@@ -12,7 +12,7 @@ export class HomePageComponent implements OnInit {
 
   $nytimesData = this.nytimesService.getNytimesAllContent();
   query: string;
-  filter = 'Firstly';
+  filter = '';
 
   constructor(private nytimesService: NytimesService, private datePipe: DatePipe) { }
 
@@ -24,7 +24,6 @@ export class HomePageComponent implements OnInit {
 
   onSelectArticle(article: ArticleModel) {
     console.log(article);
-    console.log(this.query);
   }
 
   convertDate(date: string) {

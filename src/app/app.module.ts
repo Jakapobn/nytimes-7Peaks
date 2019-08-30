@@ -20,6 +20,7 @@ import { StickyBarComponent } from './shared/sticky-bar/sticky-bar.component';
 import { SearchPipe } from './_pipe/search.pipe';
 import { SortPipe } from './_pipe/sort.pipe';
 import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
+import { ArticleDetailResolverService } from './article/article-detail/article-detail.resolver.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { ArticleDetailComponent } from './article/article-detail/article-detail.
     InputTextModule,
     TieredMenuModule
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, ArticleDetailResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

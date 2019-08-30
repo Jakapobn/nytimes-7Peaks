@@ -12,10 +12,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ArticleDetailComponent implements OnInit {
 
-  constructor(private nytimesService: NytimesService, private activatedRoute: ActivatedRoute) { }
+  constructor(private nytimesService: NytimesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-
+    this.route.data.subscribe(data => console.log('Data :', data));
   }
 
 }

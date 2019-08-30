@@ -25,7 +25,7 @@ export class HomePageComponent implements OnInit {
 
   onSelectArticle(article: ArticleModel) {
     console.log(article);
-    // this.router.navigate(['article/detail', { queryParams: { page: 1 } }]);
+    this.router.navigate(['article/detail', { url: article.url}]);
     // this.router.navigateByUrl('article/detail', { state: { hello: 'world' } });
   }
 

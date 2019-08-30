@@ -1,13 +1,16 @@
 {
   "name": "nytimes-sevenpeaks",
   "version": "0.0.0",
+  "homepage": "https://github.com/Jakapobn/nytimes-7Peaks",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +22,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "gh-pages": "^2.1.1",
     "primeicons": "^2.0.0",
     "primeng": "^8.0.2",
     "rxjs": "~6.4.0",

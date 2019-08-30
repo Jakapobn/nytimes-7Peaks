@@ -13,18 +13,15 @@ export class HomePageComponent implements OnInit {
   nytimesData$ = this.nytimesService.getNytimesAllContent();
   query: string;
   filter = '';
+  loading: boolean;
 
   constructor(private nytimesService: NytimesService, private datePipe: DatePipe, private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
-    this.nytimesService.getNytimesAllContent().subscribe(res => {
-      console.log(res);
-    })
   }
 
   onSelectArticle(article: ArticleModel) {
-    console.log(article);
     this.router.navigate(['article/detail', { url: article.url }]);
   }
 

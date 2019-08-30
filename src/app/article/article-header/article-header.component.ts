@@ -12,12 +12,11 @@ export class ArticleHeaderComponent implements OnInit {
   @Input() articleDetail: ArticleModel;
 
   link = {};
+  loading: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.articleDetail);
-
     this.articleDetail.multimedia.filter(res => {
       if (res['subType'] === "largeWidescreen1050") {
         this.link = `https://www.nytimes.com/${res['url']}`;

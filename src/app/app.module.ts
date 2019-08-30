@@ -22,6 +22,7 @@ import { SortPipe } from './_pipe/sort.pipe';
 import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
 import { ArticleDetailResolverService } from './article/article-detail/article-detail.resolver.service';
 import { ArticleHeaderComponent } from './article/article-header/article-header.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ArticleHeaderComponent } from './article/article-header/article-header.
     SearchPipe,
     SortPipe,
     ArticleDetailComponent,
-    ArticleHeaderComponent
+    ArticleHeaderComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

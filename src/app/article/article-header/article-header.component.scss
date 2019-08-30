@@ -1,0 +1,76 @@
+.inventory-body {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ny-text {
+  font-size: 2em;
+  text-align: center;
+  margin: 0.5rem;
+  /* width: 100%; */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.title {
+  margin: 2rem;
+}
+
+.title-name {
+  font-weight: bold;
+}
+
+.title-abstract {
+  font-weight: bold;
+  font-size: 33px;
+}
+
+.d-i-f {
+  display: inline-flex;
+}
+
+.sub-name {
+  font-weight: bold;
+}
+
+.sub-abstract {
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.snippet {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .title-abstract {
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .ny-text {
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5rem;
+    /* width: 100%; */
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .title-abstract {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .snippet {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+}

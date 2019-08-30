@@ -1,0 +1,14 @@
+<p-header>
+    <div class="ny-text" [routerLink]="['/']">
+        <div>The New York Times</div>
+    </div>
+    <img class="inventory-body" src="Card" [src]="link">
+
+    <div class="title">
+        <div *ngIf="articleDetail?.headline.kicker" class="title-name">{{articleDetail?.headline.kicker}} | </div>
+        <div class="title-abstract">{{articleDetail?.headline.main}}</div>
+        <div class="snippet">{{articleDetail?.snippet}}</div>
+    </div>
+
+    <hr />
+</p-header>

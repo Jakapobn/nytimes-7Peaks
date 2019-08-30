@@ -1,0 +1,67 @@
+.article-detail {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+.content-detail {
+  margin: 2rem;
+  font-size: 22px;
+  text-align: center;
+}
+
+.m-t-2rem {
+  margin-top: 2rem;
+}
+
+.d-i-f {
+  display: inline-flex;
+}
+
+.byline {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pub-date {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  font-size: 10px;
+  width: 100%;
+  text-align: right;
+}
+
+.link {
+  width: 100%;
+  text-align: right;
+  color: blue;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 440px) {
+  .byline {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 11px;
+  }
+
+  .pub-date {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 11px;
+  }
+
+  .content-detail {
+    margin: 2rem 0 0 0;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 366px) {
+}

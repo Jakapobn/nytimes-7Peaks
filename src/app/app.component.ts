@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NytimesService } from './service/nytimes.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,6 @@ import { NytimesService } from './service/nytimes.service';
 })
 export class AppComponent {
 
-  nytimesData$ = this.nytimesService.getNytimesAllContent();
-
-  constructor(private nytimesService: NytimesService) {
-    this.nytimesService.setNytimesAllContentData(this.nytimesData$);
-  }
+  constructor() { }
 
 }

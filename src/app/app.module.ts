@@ -21,6 +21,7 @@ import { SearchPipe } from './_pipe/search.pipe';
 import { SortPipe } from './_pipe/sort.pipe';
 import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
 import { ArticleDetailResolverService } from './article/article-detail/article-detail.resolver.service';
+import { ArticleHeaderComponent } from './article/article-header/article-header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ArticleDetailResolverService } from './article/article-detail/article-d
     StickyBarComponent,
     SearchPipe,
     SortPipe,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    ArticleHeaderComponent
   ],
   imports: [
     BrowserModule,

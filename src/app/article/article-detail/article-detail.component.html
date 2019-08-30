@@ -1,1 +1,32 @@
-<p>article-detail works!</p>
+<p-card>
+    <app-article-header [articleDetail]="articleDetail"></app-article-header>
+    <div class="d-i-f" *ngFor="let keyword of articleDetail?.keywords">
+        <span>{{keyword.name}} | </span>
+    </div>
+
+    <div class="ui-g m-t-2rem">
+        <div class="ui-sm-12 ui-g-2"></div>
+        <div class="ui-sm-12 ui-g-8">
+
+            <div class="byline">
+                {{articleDetail?.byline.original ? articleDetail?.byline.original : 'Anonymous'}}
+            </div>
+
+            <div class="pub-date">
+                {{convertDate(articleDetail?.pub_date)}}
+            </div>
+
+            <div class="content-detail">
+                "{{articleDetail?.lead_paragraph}}"
+            </div>
+
+        </div>
+        <div class="ui-sm-12 ui-g-2"></div>
+    </div>
+
+    <p-footer>
+        <div class="link" (click)="linkToNytimes(articleDetail?.web_url)"><u>{{articleDetail?.web_url}}
+            </u> </div>
+        <div class="footer">Copyright (c) 2019 The New York Times Company. All Rights Reserved.</div>
+    </p-footer>
+</p-card>

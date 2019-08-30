@@ -18,7 +18,7 @@ export class ArticleDetailResolverService {
             return EMPTY;
         }), mergeMap(res => {
             if (res) {
-                return of(res);
+                return of(res['response'].docs);
             } else {
                 return EMPTY;
             }

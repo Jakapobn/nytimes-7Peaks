@@ -25,8 +25,7 @@ export class HomePageComponent implements OnInit {
 
   onSelectArticle(article: ArticleModel) {
     console.log(article);
-    this.router.navigate(['article/detail', { url: article.url}]);
-    // this.router.navigateByUrl('article/detail', { state: { hello: 'world' } });
+    this.router.navigate(['article/detail', { url: article.url }]);
   }
 
   convertDate(date: string) {

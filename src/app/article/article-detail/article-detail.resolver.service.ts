@@ -12,7 +12,6 @@ export class ArticleDetailResolverService {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Observable<never> {
         let url = route.paramMap.get('url');
-        console.log(url);
 
         return this.nytimesService.getNytimesBySearch(url).pipe(catchError(err => {
             return EMPTY;

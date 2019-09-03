@@ -11,7 +11,7 @@ export class ArticleHeaderComponent implements OnInit {
 
   @Input() articleDetail: any;
 
-  link = {};
+  link = 'assets/image/No_image_available.svg';
   loading: boolean;
 
   constructor() { }
@@ -20,14 +20,10 @@ export class ArticleHeaderComponent implements OnInit {
     if (this.articleDetail.multimedia.length > 0) {
       this.articleDetail.multimedia.filter(res => {
         if (res['subType'] === "largeWidescreen1050") {
+          console.log('here')
           this.link = `https://www.nytimes.com/${res['url']}`;
-        } else {
-          this.link = 'assets/image/No_image_available.svg';
         }
       })
-    } else {
-      this.link = 'assets/image/No_image_available.svg';
     }
   }
-
 }

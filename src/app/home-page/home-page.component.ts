@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  nytimesData$ = this.nytimesService.getNytimesAllContent();
+  $nytimesData = this.nytimesService.getNytimesAllContent();
   query: string;
   filter = '';
   loading: boolean;
@@ -19,6 +19,9 @@ export class HomePageComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    this.$nytimesData.subscribe(res => {
+      this.nytimesService.setNytimesData(res['results']);
+    })
   }
 
   onSelectArticle(article: ArticleModel) {

@@ -22,4 +22,12 @@ export class NytimesService {
     const url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=web_url:("${web_url}")&api-key=${this._apiKey}`;
     return this.http.get(url);
   }
+
+  setNytimesData(data) {
+    this.nytimesData = [...data];
+  }
+
+  getNytimesData() {
+    return this.nytimesData
+  }
 }

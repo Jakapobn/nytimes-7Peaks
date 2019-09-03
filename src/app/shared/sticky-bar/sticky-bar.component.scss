@@ -32,7 +32,7 @@
 
 .ny-text {
   font-size: 1.5em;
-  text-align: center;
+  text-align: right;
 }
 
 .filter {
@@ -52,7 +52,30 @@
   height: 33px;
 }
 
-@media screen and (max-width: 767px) {
+.queryby {
+  border-radius: 50px;
+  border: 1px solid;
+  padding: 2px;
+  font-size: 12px !important;
+  margin: 7px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.queryby:hover {
+  color: red;
+}
+
+.queryby-pos {
+  position: absolute;
+  left: 250px;
+}
+
+// body .ui-tieredmenu .ui-menuitem-link{
+//   background-color: red;
+// }
+
+@media screen and (max-width: 768px) {
 }
 
 @media screen and (max-width: 440px) {
@@ -62,4 +85,24 @@
 }
 
 @media screen and (max-width: 366px) {
+  .search {
+    height: 33px;
+    width: 120px;
+  }
+
+  .queryby {
+    border-radius: 50px;
+    border: 1px solid;
+    padding: 3px;
+    font-size: 10px !important;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .queryby-pos {
+    position: absolute;
+    left: 210px;
+  }
 }

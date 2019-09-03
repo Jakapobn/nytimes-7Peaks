@@ -22,6 +22,9 @@
     </div>
 
     <p-footer>
+        <div class="back-btn">
+            <p-button label="Back" [routerLink]="['/']"></p-button>
+        </div>
         <div class="link" (click)="linkToNytimes(articleDetail?.web_url)"><u>{{articleDetail?.web_url}}
             </u> </div>
         <div class="footer">Copyright (c) 2019 The New York Times Company. All Rights Reserved.</div>

@@ -1,14 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { NytimesService } from '../service/nytimes.service';
 
 @Pipe({
   name: 'sort'
 })
 export class SortPipe implements PipeTransform {
 
+  constructor(private nytimesService: NytimesService) { }
+
   transform(value: any, args?: any): any {
 
     if (!value) return null;
-    if (!args) return value;
 
     let result: any;
 
@@ -37,7 +39,10 @@ export class SortPipe implements PipeTransform {
       })
 
       return result;
-    } else {
+    } else if (args === '') {
+      return this.nytimesService.getNytimesData();
+    }
+    else {
       return value;
     }
 

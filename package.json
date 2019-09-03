@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "ng build --prod --base-href 'https://jakapobn.github.io/nytimes-7Peaks/'",
+    "ngh-p": "ngh --dir dist/nytimes-sevenpeaks"
   },
   "private": true,
   "dependencies": {

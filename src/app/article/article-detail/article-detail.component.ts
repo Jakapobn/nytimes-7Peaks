@@ -13,7 +13,7 @@ import { DatePipe } from '@angular/common';
 })
 export class ArticleDetailComponent implements OnInit {
 
-  articleDetail: ArticleModel;
+  articleDetail: any;
 
   constructor(private nytimesService: NytimesService, private route: ActivatedRoute, private datePipe: DatePipe) { }
 

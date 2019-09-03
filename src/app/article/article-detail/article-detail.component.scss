@@ -37,10 +37,19 @@
   width: 100%;
   text-align: right;
   color: blue;
+  font-size: 10px;
   cursor: pointer;
 }
 
+.back-btn {
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 767px) {
+  .back-btn {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -61,7 +70,16 @@
     font-size: 15px;
     text-align: center;
   }
+  
+  .back-btn {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 366px) {
+  .back-btn {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }

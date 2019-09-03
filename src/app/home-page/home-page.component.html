@@ -5,7 +5,7 @@
     <div class="ui-g-10 ui-sm-12">
 
 
-        <div *ngFor="let data of (nytimesData$ | async)?.results | searchFilter: query | sort : filter" class="panel">
+        <div *ngFor="let data of ($nytimesData | async)?.results | searchFilter: query | sort : filter" class="panel">
             <p-panel>
                 <p-header>
                     <div class="title" (click)="onSelectArticle(data)">

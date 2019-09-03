@@ -17,6 +17,7 @@ export class StickyBarComponent implements OnInit {
   sticky: boolean = false;
   elementPosition: any;
   query: string;
+  queryBy = '';
   items = [
     {
       label: 'Firstly',
@@ -41,7 +42,13 @@ export class StickyBarComponent implements OnInit {
   }
 
   onClickFilter(text: string) {
+    this.queryBy = text;
     this.filter.emit(text)
+  }
+
+  cancleFilter(queryBy: string) {
+    this.queryBy = queryBy;
+    this.filter.emit(queryBy)
   }
 
   @HostListener('window:scroll', ['$event'])
